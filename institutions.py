@@ -70,25 +70,25 @@ def printer(dataList):
     dataFrame = pd.DataFrame({'Data': dataList})
     for index, row in dataFrame.iterrows():
         if dataList[0] == "Institution Name":
-            cell = 'BC%d' % (index + 1)
+            cell = 'A%d' % (index + 1)
             ws[cell] = row[0]
         elif dataList[0] == "Número de comentarios positivos":
-            cell = 'BD%d' % (index + 1)
+            cell = 'B%d' % (index + 1)
             ws[cell] = row[0]
         elif dataList[0] == "Número de comentarios negativos":
-            cell = 'BE%d' % (index + 1)
+            cell = 'C%d' % (index + 1)
             ws[cell] = row[0]
         elif dataList[0] == "Número de comentarios neutrales":
-            cell = 'BF%d' % (index + 1)
+            cell = 'D%d' % (index + 1)
             ws[cell] = row[0]
         elif dataList[0] == "Sumatoria Goggle Sentiment Score":
-            cell = 'BG%d' % (index + 1)
+            cell = 'E%d' % (index + 1)
             ws[cell] = row[0]
         elif dataList[0] == "Promedio":
-            cell = 'BH%d' % (index + 1)
+            cell = 'F%d' % (index + 1)
             ws[cell] = row[0]
         else:
-            cell = 'BI%d' % (index + 1)
+            cell = 'G%d' % (index + 1)
             ws[cell] = row[0]
 
 
@@ -111,6 +111,7 @@ def framer(insititutionsObj):
 
 
 wb = load_workbook(datasheet)
-ws = wb['export']
+wb.create_sheet('institutions')
+ws = wb['institutions']
 framer(institutions)
 wb.save(datasheet)
