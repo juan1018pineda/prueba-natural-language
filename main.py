@@ -6,6 +6,7 @@ import pandas as pd
 from google.cloud import language_v1
 import os
 from google.oauth2 import service_account
+from pyasn1.type.constraint import ConstraintsUnion
 
 ctypes.windll.user32.MessageBoxW(
     0, "Algoritmo en ejecución.", "Por favor espera un momento", 1)
@@ -30,7 +31,7 @@ gsentiment = ['Google Sentiment']
 for line in comments:
     text = line
     document = language_v1.Document(
-        content=text, type_=language_v1.Document.Type.PLAIN_TEXT)
+        content=text, type_=language_v1.Document.Type.PLAIN_TEXT, language='es')
     sentiment = client.analyze_sentiment(
         request={'document': document}).document_sentiment
     if sentiment.score > 0:
