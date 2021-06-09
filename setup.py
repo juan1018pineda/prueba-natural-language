@@ -11,8 +11,8 @@ if sys.platform == "win32":
     base = "Win32GUI"
 
 setup(
-    name = "main",
-    version = "0.3",
+    name = "nlDIAPE",
+    version = "0.4",
     description = "Algoritmo medición del sentimiento, Google Natural Language",
     options = {"build_exe": build_exe_options},
     executables = [Executable("main.py", base=base)]

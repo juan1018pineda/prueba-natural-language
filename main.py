@@ -11,7 +11,7 @@ ctypes.windll.user32.MessageBoxW(
     0, "Algoritmo en ejecución.", "Por favor espera un momento", 1)
 
 credentials = service_account.Credentials.from_service_account_file(
-    "prueba-natural-language-308614-d832161d0c10.json")
+    "key.json")
 
 # Instantiates a client
 client = language_v1.LanguageServiceClient(credentials=credentials)
