@@ -15,5 +15,5 @@ setup(
     version = "0.4",
     description = "Algoritmo medición del sentimiento, Google Natural Language",
     options = {"build_exe": build_exe_options},
-    executables = [Executable("main.py", base=base)]
+    executables = [Executable("nlDIAPE.py", base=base)]
 )
