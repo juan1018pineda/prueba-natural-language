@@ -4,7 +4,6 @@ import ctypes  # An included library with Python install.
 from openpyxl import load_workbook
 import pandas as pd
 from google.cloud import language_v1
-import os
 from google.oauth2 import service_account
 from pyasn1.type.constraint import ConstraintsUnion
 
