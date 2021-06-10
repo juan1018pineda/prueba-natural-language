@@ -7,8 +7,8 @@ from google.cloud import language_v1
 from google.oauth2 import service_account
 from pyasn1.type.constraint import ConstraintsUnion
 
-ctypes.windll.user32.MessageBoxW(
-    0, "Algoritmo en ejecución.", "Por favor espera un momento", 1)
+# ctypes.windll.user32.MessageBoxW(
+    # 0, "Algoritmo en ejecución.", "Por favor espera un momento", 1)
 
 credentials = service_account.Credentials.from_service_account_file(
     "key.json")
@@ -67,5 +67,5 @@ wb.save(datasheet)
 
 import institutions
 
-ctypes.windll.user32.MessageBoxW(
-    0, "El algoritmo se ejecutó exitosamente. Revisa el archivo de Excel synthesio.xlsx", "Resultado Exitoso", 1)
+# ctypes.windll.user32.MessageBoxW(
+    # 0, "El algoritmo se ejecutó exitosamente. Revisa el archivo de Excel synthesio.xlsx", "Resultado Exitoso", 1)
