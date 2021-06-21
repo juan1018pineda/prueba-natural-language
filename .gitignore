@@ -8,3 +8,4 @@ dist/
 # Other file formats
 *.json
 *.xlsx
+*.gitattributes
